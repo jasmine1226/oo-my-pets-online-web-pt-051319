@@ -60,18 +60,16 @@ class Owner
   end
 
   def sell_pets
-    @pets[:dogs].collect do |dog|
-      dog.mood = "nervous"
+    @pets.each do |category, animals|
+      animals.collect do |animal|
+        animal.mood = "nervous"
+      end
+      animals.clear
     end
-    @pets[:cats].collect do |cat|
-      cat.mood = "nervous"
-    end
-    @pets[:fishes].collect do |fish|
-      fish.mood = "happy"
-    end
-    @pets[:dogs].clear
-    @pets[:cats].clear
-    @pets[:fishes].clear
+
+  #  @pets[:dogs].clear
+  #  @pets[:cats].clear
+  #  @pets[:fishes].clear
   end
 
   def list_pets
