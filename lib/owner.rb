@@ -26,4 +26,8 @@ class Owner
     cat = Cat.new(name)
     @pets[:cats] << cat
   end
+
+  def play_with_cats
+  end
+
 end
